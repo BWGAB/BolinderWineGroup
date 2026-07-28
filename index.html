@@ -1,124 +1,517 @@
 <!DOCTYPE html>
-<html lang="sv"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta name="description" content="Svensk importör av kvalitetsvin för restauranger och företag."> <title>[FÖRETAGSNAMN] – Vinimport för restauranger och företag</title>
-<style> * { box-sizing: border-box; } body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; color: #2d2424; background: #f7f4ef; } header { background: #4a1020; color: white; padding: 20px 7%; } nav { display: flex; justify-content: space-between; align-items: center; gap: 20px; } .logo { font-size: 1.4rem; font-weight: bold; } nav a { color: white; text-decoration: none; margin-left: 18px; } .hero { padding: 110px 7%; text-align: center; background: #efe6d8; } .hero h1 { font-size: clamp(2.5rem, 6vw, 5rem); margin-bottom: 15px; color: #4a1020; } .hero p { max-width: 750px; margin: 0 auto 30px; font-size: 1.2rem; } .button { display: inline-block; padding: 15px 25px; background: #4a1020; color: white; text-decoration: none; border-radius: 4px; font-weight: bold; } main { max-width: 1150px; margin: auto; padding: 70px 25px; } section { margin-bottom: 75px; } h2 { color: #4a1020; font-size: 2.2rem; } .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; } .card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08); } .contact { background: #4a1020; color: white; padding: 50px; border-radius: 8px; text-align: center; } .contact h2 { color: white; } .contact .button { background: white; color: #4a1020; } footer { background: #24191b; color: white; text-align: center; padding: 35px 20px; } @media (max-width: 700px) { nav { flex-direction: column; } nav a { margin: 0 7px; } .hero { padding: 80px 25px; } } </style>
+
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+name="description"
+content="Bolinder Wine Group – utvalda viner för restauranger och företag."
+
+>
+
+  <title>Bolinder Wine Group – Vinimport för restauranger och företag</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f1b1b;
+      background: #faf9f7;
+      line-height: 1.6;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      padding: 24px 7%;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      color: white;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 90vh;
+      display: grid;
+      place-items: center;
+      padding: 150px 25px 100px;
+      text-align: center;
+      color: white;
+      background:
+        linear-gradient(
+          rgba(25, 12, 14, 0.48),
+          rgba(25, 12, 14, 0.62)
+        ),
+        url("https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=2000&q=85")
+        center/cover;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      margin-bottom: 18px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-family: Georgia, serif;
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 28px auto 36px;
+      font-size: 1.1rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 25px;
+      border: 1px solid white;
+      color: white;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: white;
+      color: #3d1018;
+    }
+
+    main {
+      max-width: 1250px;
+      margin: auto;
+      padding: 110px 30px;
+    }
+
+    .intro {
+      max-width: 760px;
+      margin: 0 auto 110px;
+      text-align: center;
+    }
+
+    .intro h2,
+    .section-heading h2 {
+      margin: 0 0 18px;
+      font-family: Georgia, serif;
+      font-size: clamp(2.3rem, 5vw, 4.2rem);
+      font-weight: 400;
+      line-height: 1.1;
+    }
+
+    .intro p {
+      margin: 0;
+      color: #625b59;
+      font-size: 1.05rem;
+    }
+
+    .section-heading {
+      margin-bottom: 35px;
+      text-align: center;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: #625b59;
+    }
+
+    .wine-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-bottom: 120px;
+    }
+
+    .wine-card {
+      position: relative;
+      min-height: 520px;
+      overflow: hidden;
+      background: #ddd;
+    }
+
+    .wine-card img {
+      height: 520px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .wine-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .wine-card-content {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 80px 28px 28px;
+      color: white;
+      background:
+        linear-gradient(
+          transparent,
+          rgba(0, 0, 0, 0.7)
+        );
+    }
+
+    .wine-card h3 {
+      margin: 0;
+      font-family: Georgia, serif;
+      font-size: 2rem;
+      font-weight: 400;
+    }
+
+    .wine-card p {
+      margin: 5px 0 0;
+      font-size: 0.9rem;
+    }
+
+    .restaurant {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 560px;
+      margin-bottom: 110px;
+      background: #eee8df;
+    }
+
+    .restaurant-image img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .restaurant-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 70px;
+    }
+
+    .restaurant-content h2 {
+      margin: 0 0 20px;
+      font-family: Georgia, serif;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    .restaurant-content p {
+      max-width: 440px;
+      margin: 0 0 30px;
+      color: #5f5652;
+    }
+
+    .dark-button {
+      align-self: flex-start;
+      padding: 15px 25px;
+      background: #3d1018;
+      color: white;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .contact {
+      padding: 110px 25px;
+      text-align: center;
+      color: white;
+      background: #3d1018;
+    }
+
+    .contact h2 {
+      margin: 0;
+      font-family: Georgia, serif;
+      font-size: clamp(3rem, 7vw, 6rem);
+      font-weight: 400;
+    }
+
+    .contact p {
+      margin: 20px auto 35px;
+      font-size: 1.05rem;
+    }
+
+    footer {
+      padding: 35px 25px;
+      text-align: center;
+      color: #766d69;
+      background: #f1eeea;
+      font-size: 0.85rem;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 850px) {
+      header {
+        padding: 20px 25px;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      .nav-links a {
+        font-size: 0.75rem;
+      }
+
+      .wine-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .wine-card,
+      .wine-card img {
+        min-height: 430px;
+        height: 430px;
+      }
+
+      .restaurant {
+        grid-template-columns: 1fr;
+      }
+
+      .restaurant-image img {
+        height: 430px;
+      }
+
+      .restaurant-content {
+        padding: 60px 35px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .logo {
+        font-size: 0.8rem;
+      }
+
+      .nav-links a:nth-child(1),
+      .nav-links a:nth-child(2) {
+        display: none;
+      }
+
+      main {
+        padding: 80px 20px;
+      }
+
+      .intro {
+        margin-bottom: 80px;
+      }
+
+      .restaurant-content {
+        padding: 50px 28px;
+      }
+    }
+  </style>
+
 </head>
+
 <body>
-<header> <nav> <div class="logo">[BOLINDER WINE GROUP]</div>
-  <div>
+
+  <header>
+    <nav>
+      <div class="logo">Bolinder Wine Group</div>
+
+```
+  <div class="nav-links">
     <a href="#om-oss">Om oss</a>
     <a href="#sortiment">Sortiment</a>
     <a href="#restauranger">För restauranger</a>
     <a href="#kontakt">Kontakt</a>
   </div>
 </nav>
-</header>
-<section class="hero"> <h1>Vin med kvalitet, ursprung och karaktär</h1>
-<p>
-  Vi är en svensk vinimportör som erbjuder ett noga utvalt sortiment
-  till restauranger och företag. Vi hjälper våra kunder att hitta viner
-  som passar deras verksamhet, meny och målgrupp.
-</p>
+```
 
-<a class="button" href="#kontakt">Kontakta oss</a>
-</section>
-<main>
-<section id="om-oss">
-  <h2>Om oss</h2>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">Svensk vinimportör</div>
+
+```
+  <h1>Vin med karaktär</h1>
 
   <p>
-    [BOLINDER WINE GROUP] är ett svenskt företag som importerar och förmedlar
-    kvalitetsviner till restauranger och företagskunder. Vårt fokus är
-    långsiktiga samarbeten, personlig service och ett sortiment med tydlig
-    karaktär och kvalitet.
+    Utvalda viner för restauranger och företag.
   </p>
 
+  <a class="button" href="#kontakt">
+    Kontakta oss
+  </a>
+</div>
+```
+
+  </section>
+
+  <main>
+
+```
+<section id="om-oss" class="intro">
+  <h2>Utvalt med omsorg</h2>
+
   <p>
-    Vi vill göra det enklare för våra kunder att hitta rätt vin och erbjuder
-    information och vägledning kring ursprung, druvsorter, smakprofiler och
-    kombinationer med mat.
+    Bolinder Wine Group importerar kvalitetsviner
+    med fokus på ursprung, karaktär och långsiktiga samarbeten.
   </p>
 </section>
 
 <section id="sortiment">
-  <h2>Vårt sortiment</h2>
 
-  <div class="cards">
+  <div class="section-heading">
+    <h2>Vårt sortiment</h2>
 
-    <article class="card">
-      <h3>Röda viner</h3>
-      <p>
-        Viner med olika karaktär och smakprofil, från eleganta och
-        fruktiga till fylliga och kraftfulla.
-      </p>
+    <p>
+      Viner för olika smaker, menyer och tillfällen.
+    </p>
+  </div>
+
+  <div class="wine-grid">
+
+    <article class="wine-card">
+      <img
+        src="https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?auto=format&fit=crop&w=1000&q=85"
+        alt="Rött vin"
+      >
+
+      <div class="wine-card-content">
+        <h3>Röda viner</h3>
+        <p>Eleganta, fruktiga och fylliga.</p>
+      </div>
     </article>
 
-    <article class="card">
-      <h3>Vita viner</h3>
-      <p>
-        Friska, aromatiska och fylliga viner för olika maträtter,
-        menyer och tillfällen.
-      </p>
+    <article class="wine-card">
+      <img
+        src="https://images.unsplash.com/photo-1473973266408-ed4e27abdd47?auto=format&fit=crop&w=1000&q=85"
+        alt="Vitt vin"
+      >
+
+      <div class="wine-card-content">
+        <h3>Vita viner</h3>
+        <p>Friska, aromatiska och balanserade.</p>
+      </div>
     </article>
 
-    <article class="card">
-      <h3>Mousserande vin</h3>
-      <p>
-        Utvalda mousserande viner för restauranger, företag och
-        särskilda tillfällen.
-      </p>
+    <article class="wine-card">
+      <img
+        src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1000&q=85"
+        alt="Mousserande vin"
+      >
+
+      <div class="wine-card-content">
+        <h3>Mousserande</h3>
+        <p>För måltider och särskilda tillfällen.</p>
+      </div>
     </article>
 
   </div>
+
 </section>
 
-<section id="restauranger">
-  <h2>För restauranger och företag</h2>
+<section id="restauranger" class="restaurant">
 
-  <div class="cards">
+  <div class="restaurant-image">
+    <img
+      src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=85"
+      alt="Restaurang med dukat bord"
+    >
+  </div>
 
-    <article class="card">
-      <h3>Personlig rådgivning</h3>
-      <p>
-        Vi hjälper er att hitta viner som passar er meny,
-        verksamhet och målgrupp.
-      </p>
-    </article>
+  <div class="restaurant-content">
 
-    <article class="card">
-      <h3>Utvalt sortiment</h3>
-      <p>
-        Ett sortiment med fokus på kvalitet, ursprung och tydlig
-        smakprofil.
-      </p>
-    </article>
+    <h2>För restauranger</h2>
 
-    <article class="card">
-      <h3>Långsiktiga samarbeten</h3>
-      <p>
-        Vi vill vara en engagerad och tillgänglig partner för våra
-        restaurang- och företagskunder.
-      </p>
-    </article>
+    <p>
+      Vi hjälper restauranger och företag att hitta
+      viner som passar deras meny, verksamhet och gäster.
+    </p>
+
+    <a class="dark-button" href="#kontakt">
+      Inled ett samarbete
+    </a>
 
   </div>
+
 </section>
+```
 
-<section id="kontakt" class="contact">
-  <h2>Vill du veta mer?</h2>
+  </main>
 
-  <p>
-    Kontakta oss för information om sortiment, samarbeten och
-    företagslösningar.
-  </p>
+  <section id="kontakt" class="contact">
 
-  <a class="button" href="mailto:info@dindoman.se">
-    Skicka en förfrågan
-  </a>
-</section>
-</main>
-<footer> <p> © 2026 [BOLINDER WINE GROUP] · Org.nr 559530-9005 </p>
+```
+<h2>Låt oss prata vin</h2>
+
+<p>
+  Kontakta oss för sortiment, samarbeten och företagslösningar.
+</p>
+
+<a class="button" href="mailto:info@bolinderwinegroup.se">
+  info@bolinderwinegroup.se
+</a>
+```
+
+  </section>
+
+  <footer>
+
+```
+<p>
+  © 2026 Bolinder Wine Group · Org.nr 559530-9005
+</p>
+
 <p>
   Sverige · info@bolinderwinegroup.se
 </p>
-</footer>
-</body> </html>
+```
+
+  </footer>
+
+</body>
+</html>
