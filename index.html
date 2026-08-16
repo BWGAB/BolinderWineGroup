@@ -1,240 +1,38 @@
 <!DOCTYPE html>
 <html lang="sv">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Bolinder Wine Group</title>
-
-  <style>
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Helvetica, Arial, sans-serif;
-      background: #faf8f5;
-      color: #111;
-    }
-
-    header {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      padding: 30px 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 100;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(10px);
-    }
-
-    .logo {
-      font-size: 22px;
-      letter-spacing: 3px;
-      font-weight: 600;
-    }
-
-    nav a {
-      margin-left: 35px;
-      text-decoration: none;
-      color: #111;
-      font-size: 14px;
-      text-transform: uppercase;
-    }
-
-    .hero {
-      height: 100vh;
-      background:
-        linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
-        url("https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=2000&q=80");
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      padding: 20px;
-    }
-
-    .hero h1 {
-      font-size: 72px;
-      font-weight: 300;
-      letter-spacing: 6px;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 20px;
-      letter-spacing: 2px;
-    }
-
-    section {
-      padding: 120px 10%;
-    }
-
-    .intro {
-      text-align: center;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .intro h2 {
-      font-size: 48px;
-      margin-bottom: 25px;
-      font-weight: 300;
-    }
-
-    .intro p {
-      font-size: 20px;
-      color: #555;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: 550px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    .contact {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 140px 20px;
-    }
-
-    .contact h2 {
-      font-size: 56px;
-      font-weight: 300;
-      margin-bottom: 25px;
-    }
-
-    .contact a {
-      color: white;
-      text-decoration: none;
-      border: 1px solid white;
-      padding: 16px 30px;
-      display: inline-block;
-      margin-top: 25px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px;
-      color: #666;
-      font-size: 14px;
-    }
-
-    @media (max-width: 900px) {
-
-      header {
-        padding: 20px;
-      }
-
-      nav {
-        display: none;
-      }
-
-      .hero h1 {
-        font-size: 42px;
-      }
-
-      .gallery {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery img {
-        height: 400px;
-      }
-
-    }
-
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bolinder Wine Group – svensk vinimportör för restauranger och företag.">
+<title>Bolinder Wine Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#171414;--wine:#4a1721;--cream:#f6f3ee;--line:#ddd7cf;--muted:#756d67}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--cream);font-family:Inter,Arial,sans-serif;font-weight:300}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.nav{position:fixed;z-index:20;top:0;left:0;right:0;padding:26px 5vw;display:flex;justify-content:space-between;align-items:center;background:rgba(246,243,238,.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(23,20,20,.08)}.brand{font-size:13px;letter-spacing:.22em;font-weight:500}.links{display:flex;gap:30px;font-size:11px;letter-spacing:.14em;text-transform:uppercase}.hero{min-height:100vh;padding:160px 7vw 90px;display:flex;align-items:flex-end;background:linear-gradient(180deg,rgba(20,10,10,.08),rgba(20,10,10,.55)),url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=2200&q=85') center/cover;color:#fff}.hero-inner{max-width:900px}.eyebrow{font-size:11px;letter-spacing:.25em;text-transform:uppercase;margin-bottom:18px}.hero h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(64px,10vw,150px);font-weight:400;line-height:.82;margin:0 0 28px;letter-spacing:-.025em}.hero p{font-size:15px;letter-spacing:.04em;max-width:520px;margin:0}.section{padding:120px 7vw}.statement{max-width:820px;margin:auto;text-align:center}.statement h2,.section-title{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:clamp(46px,6vw,82px);line-height:.95;margin:0 0 24px}.statement p{color:var(--muted);font-size:16px;line-height:1.9}.section-kicker{text-align:center;text-transform:uppercase;letter-spacing:.22em;font-size:10px;color:var(--muted);margin-bottom:18px}.catalog{background:#fff;padding:120px 5vw}.catalog-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:55px}.catalog-head p{max-width:360px;color:var(--muted);font-size:13px;line-height:1.8;margin:0}.products{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-top:1px solid var(--line)}.product{background:#fff;min-height:650px;padding:45px 35px 40px;display:flex;flex-direction:column;transition:transform .3s ease,background .3s ease}.product:hover{background:#faf8f5;transform:translateY(-4px)}.bottle{height:430px;display:flex;align-items:center;justify-content:center;margin-bottom:28px;background:#faf8f5}.bottle img{height:400px;width:100%;object-fit:contain}.category{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}.product h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:34px;font-weight:500;margin:0 0 4px}.product .type{font-size:12px;color:var(--muted);margin:0 0 20px}.product .grapes{font-size:11px;letter-spacing:.04em;margin:0}.product .request{margin-top:auto;padding-top:25px;font-size:10px;letter-spacing:.17em;text-transform:uppercase;color:var(--wine);border-top:1px solid var(--line)}.about{display:grid;grid-template-columns:1.1fr .9fr;min-height:620px}.about-image{background:url('https://images.unsplash.com/photo-1473973266408-ed4e27abdd47?auto=format&fit=crop&w=1400&q=85') center/cover}.about-copy{background:#eee8df;padding:90px 8vw;display:flex;flex-direction:column;justify-content:center}.about-copy h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:68px;font-weight:400;line-height:.9;margin:0 0 28px}.about-copy p{max-width:460px;color:#5f5752;font-size:14px;line-height:1.9}.contact{padding:150px 7vw;text-align:center;background:var(--wine);color:#fff}.contact h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:clamp(55px,8vw,110px);line-height:.85;margin:0 0 25px}.contact p{font-size:13px;opacity:.8;margin:0 0 35px}.contact a{display:inline-block;border:1px solid rgba(255,255,255,.7);padding:16px 28px;font-size:10px;letter-spacing:.18em;text-transform:uppercase}.footer{padding:35px 5vw;display:flex;justify-content:space-between;gap:20px;font-size:10px;color:var(--muted);letter-spacing:.05em}.footer p{margin:0}@media(max-width:900px){.links{gap:15px}.products{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr}.about-image{min-height:480px}}@media(max-width:620px){.nav{padding:20px}.links a:nth-child(-n+2){display:none}.hero{padding:140px 25px 70px}.hero h1{font-size:64px}.section{padding:90px 25px}.catalog{padding:90px 15px}.catalog-head{display:block}.catalog-head p{margin-top:18px}.products{grid-template-columns:1fr}.product{min-height:600px}.bottle{height:380px}.bottle img{height:350px}.about-copy{padding:70px 30px}.footer{display:block;text-align:center}.footer p+p{margin-top:10px}}
+</style>
 </head>
-
 <body>
-
-<header>
-
-  <div class="logo">BOLINDER WINE GROUP</div>
-
-  <nav>
-    <a href="#om">Om oss</a>
-    <a href="#sortiment">Sortiment</a>
-    <a href="#kontakt">Kontakt</a>
-  </nav>
-
-</header>
-
-<section class="hero">
-
-  <div>
-
-    <h1>Bolinder Wine Group</h1>
-
-    <p>Utvalda viner för restauranger och företag</p>
-
-  </div>
-
-</section>
-
-<section id="om" class="intro">
-
-  <h2>Vin med ursprung och karaktär</h2>
-
-  <p>
-    Vi importerar och distribuerar exklusiva viner till restauranger,
-    hotell och företagskunder i Sverige.
-  </p>
-
-</section>
-
-<section id="sortiment">
-
-  <div class="gallery">
-
-    <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1200&q=80">
-
-    <img src="https://images.unsplash.com/photo-1569919659476-f0852f6834b7?auto=format&fit=crop&w=1200&q=80">
-
-    <img src="https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?auto=format&fit=crop&w=1200&q=80">
-
-  </div>
-
-</section>
-
-<section id="kontakt" class="contact">
-
-  <h2>Kontakt</h2>
-
-  <p>För restauranger, företag och samarbeten.</p>
-
-  <a href="mailto:info@bolinderwinegroup.se">
-    info@bolinderwinegroup.se
-  </a>
-
-</section>
-
-<footer>
-
-  © 2026 Bolinder Wine Group · Org.nr 559530-9005
-
-</footer>
-
-</body>
-
-</html>
+<header class="nav"><a class="brand" href="#top">BOLINDER WINE GROUP</a><nav class="links"><a href="#om">Om oss</a><a href="#sortiment">Sortiment</a><a href="#restauranger">Restauranger</a><a href="#kontakt">Kontakt</a></nav></header>
+<section class="hero" id="top"><div class="hero-inner"><div class="eyebrow">Svensk vinimportör</div><h1>Vin med<br>karaktär.</h1><p>Utvalda viner från producenter med tydligt ursprung, kvalitet och personlighet.</p></div></section>
+<section class="section" id="om"><div class="statement"><div class="section-kicker">Bolinder Wine Group</div><h2>Utvalt med omsorg.</h2><p>Vi importerar och erbjuder viner för restauranger och företag i Sverige. Vårt fokus ligger på tydligt ursprung, kvalitet och långsiktiga relationer.</p></div></section>
+<section class="catalog" id="sortiment"><div class="catalog-head"><div><div class="section-kicker" style="text-align:left">La Regola · Toscana</div><h2 class="section-title">Sortiment</h2></div><p>Ett urval från Podere La Regola på den toskanska kusten. Klicka på ett vin för att skicka en förfrågan.</p></div><div class="products">
+<article class="product"><div class="bottle"><img src="images/strido.png" alt="STRIDO"></div><div class="category">Röda viner · Toscana</div><h3>STRIDO</h3><p class="type">Costa Toscana Rosso IGT</p><p class="grapes">Merlot · 14,5 %</p><a class="request" href="mailto:info@bolinderwinegroup.se?subject=Förfrågan%20om%20STRIDO">Förfrågan&nbsp; →</a></article>
+<article class="product"><div class="bottle"><img src="images/la-regola-rosso.png" alt="LA REGOLA"></div><div class="category">Cru · Toscana</div><h3>LA REGOLA</h3><p class="type">Costa Toscana Rosso IGT</p><p class="grapes">Cabernet Franc · 14,5 %</p><a class="request" href="mailto:info@bolinderwinegroup.se?subject=Förfrågan%20om%20LA%20REGOLA">Förfrågan&nbsp; →</a></article>
+<article class="product"><div class="bottle"><img src="images/la-regola-bianco.png" alt="LA REGOLA"></div><div class="category">Vita viner · Toscana</div><h3>LA REGOLA</h3><p class="type">Costa Toscana Bianco IGT</p><p class="grapes">Chardonnay · Sauvignon Blanc · 13,5 %</p><a class="request" href="mailto:info@bolinderwinegroup.se?subject=Förfrågan%20om%20LA%20REGOLA">Förfrågan&nbsp; →</a></article>
+<article class="product"><div class="bottle"><img src="images/beloro.png" alt="BELORO"></div><div class="category">Röda viner · Toscana</div><h3>BELORO</h3><p class="type">Costa Toscana Rosso IGT</p><p class="grapes">Sangiovese · 14 %</p><a class="request" href="mailto:info@bolinderwinegroup.se?subject=Förfrågan%20om%20BELORO">Förfrågan&nbsp; →</a></article>
+<article class="product"><div class="bottle"><img src="images/vallino.png" alt="VALLINO"></div><div class="category">Röda viner · Toscana</div><h3>VALLINO</h3><p class="type">Costa Toscana Rosso IGT</p><p class="grapes">Cabernet Sauvignon · Sangiovese · Cabernet Franc · 13,5 %</p><a class="request" href="mailto:info@bolinderwinegroup.se?subject=Förfrågan%20om%20VALLINO">Förfrågan&nbsp; →</a></article>
+<article class="product"><div class="bottle"><img src="images/lauro.png" alt="LAURO"></div><div class="category">Vita viner · Toscana</div><h3>LAURO</h3><p class="type">Costa Toscana Bianco IGT</p><p class="grapes">Viognier · 14 %</p><a class="request" href="mailto:info@bolinderwinegroup.se?subject=Förfrågan%20om%20LAURO">Förfrågan&nbsp; →</a></article>
+<article class="product"><div class="bottle"><img src="images/ligustro.png" alt="LIGUSTRO"></div><div class="category">Röda viner · Toscana</div><h3>LIGUSTRO</h3><p class="type">Costa Toscana Rosso IGT</p><p class="grapes">Cabernet Franc · 13,5 %</p><a class="request" href="mailto:info@bolinderwinegroup.se?subject=Förfrågan%20om%20LIGUSTRO">Förfrågan&nbsp; →</a></article>
+<article class="product"><div class="bottle"><img src="images/steccaia.png" alt="STECCAIA"></div><div class="category">Vita viner · Toscana</div><h3>STECCAIA</h3><p class="type">Costa Toscana Bianco IGT</p><p class="grapes">Vermentino · 13,5 %</p><a class="request" href="mailto:info@bolinderwinegroup.se?subject=Förfrågan%20om%20STECCAIA">Förfrågan&nbsp; →</a></article>
+<article class="product"><div class="bottle"><img src="images/rosegola.png" alt="ROSÈGOLA"></div><div class="category">Rosé · Toscana</div><h3>ROSÈGOLA</h3><p class="type">Costa Toscana Rosato IGT</p><p class="grapes">Sangiovese · 12,5 %</p><a class="request" href="mailto:info@bolinderwinegroup.se?subject=Förfrågan%20om%20ROSÈGOLA">Förfrågan&nbsp; →</a></article>
+<article class="product"><div class="bottle"><img src="images/lecccezione-rose.png" alt="L’ECCEZIONE ROSÉ"></div><div class="category">Mousserande · Toscana</div><h3>L’ECCEZIONE ROSÉ</h3><p class="type">Vino Spumante Rosé</p><p class="grapes">Manseng · Pinot Noir</p><a class="request" href="mailto:info@bolinderwinegroup.se?subject=Förfrågan%20om%20L’ECCEZIONE%20ROSÉ">Förfrågan&nbsp; →</a></article>
+<article class="product"><div class="bottle"><img src="images/lecccezione.png" alt="L’ECCEZIONE"></div><div class="category">Mousserande · Toscana</div><h3>L’ECCEZIONE</h3><p class="type">Brut Nature Metodo Classico</p><p class="grapes">Manseng · Chardonnay · 12,5 %</p><a class="request" href="mailto:info@bolinderwinegroup.se?subject=Förfrågan%20om%20L’ECCEZIONE">Förfrågan&nbsp; →</a></article>
+<article class="product"><div class="bottle"><img src="images/lecccezione-60.png" alt="L’ECCEZIONE 60"></div><div class="category">Mousserande · Toscana</div><h3>L’ECCEZIONE 60</h3><p class="type">Brut Nature Metodo Classico Millesimato</p><p class="grapes">Manseng · Chardonnay · 12,5 %</p><a class="request" href="mailto:info@bolinderwinegroup.se?subject=Förfrågan%20om%20L’ECCEZIONE%2060">Förfrågan&nbsp; →</a></article>
+<article class="product"><div class="bottle"><img src="images/sondrete.png" alt="SONDRETE"></div><div class="category">Sött vin · Toscana</div><h3>SONDRETE</h3><p class="type">Bianco di Toscana IGT</p><p class="grapes">Trebbiano · Malvasia · Colombana · 12 %</p><a class="request" href="mailto:info@bolinderwinegroup.se?subject=Förfrågan%20om%20SONDRETE">Förfrågan&nbsp; →</a></article>
+</div></section>
+<section class="about" id="restauranger"><div class="about-image"></div><div class="about-copy"><div class="section-kicker" style="text-align:left">För restauranger & företag</div><h2>Rätt vin<br>till rätt bord.</h2><p>Vi hjälper restauranger och företagskunder att hitta viner som passar meny, verksamhet och gäster.</p></div></section>
+<section class="contact" id="kontakt"><div class="section-kicker" style="color:rgba(255,255,255,.65)">Kontakt</div><h2>Låt oss prata vin.</h2><p>Sortiment · samarbeten · förfrågningar</p><a href="mailto:info@bolinderwinegroup.se">info@bolinderwinegroup.se</a></section>
+<footer class="footer"><p>© 2026 Bolinder Wine Group · Org.nr 559530-9005</p><p>Sverige · info@bolinderwinegroup.se</p></footer>
+</body></html>
